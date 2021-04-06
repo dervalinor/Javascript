@@ -1,1 +1,10 @@
+body {
+	background-image: url("anime.jpg");
+	color: #E008BD;
+}
 
+a {
+	color: #0878E0;
+	border: 1px solid #DA0FBD;
+	padding: 5px;
+}
