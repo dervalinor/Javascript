@@ -20,3 +20,15 @@ document.write("<br>");
 
 Value_attribute = rango.getAttribute("type");
 document.write("Value of attribute: " + Value_attribute);
+
+//Now we going to remove a attribute
+
+const remover = document.querySelector(".remover");
+//value_remove = document.removeAttribute("type");
+
+//now we going to modify a title
+
+const titulo = document.querySelector(".titulo");
+
+//contentEditable: Editar el contenido
+titulo.setAttribute("contentEditable", "true");
