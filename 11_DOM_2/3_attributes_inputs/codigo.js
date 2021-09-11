@@ -19,4 +19,16 @@ document.write(input.value);//show the content inside of the input
 document.write("<br>");
 //change the type of input
 const input2 = document.querySelector(".input-normal2");
-document.write(input2.type = "range"); //change input of text to range
+input2.type = "range"; //change input of text to range
+
+const input3 = document.querySelector(".input-normal3");
+input3.accept = "image/png"; //only accept images of format png
+
+//form - give solution for problem of input-submit out of form and input-text
+//inside of form
+
+//minlength -- minimum length of a elements
+const input4 = document.querySelector(".input-normal4");
+input4.minlength = "20"; //limit of characters is 20
+
+
