@@ -29,6 +29,12 @@ input3.accept = "image/png"; //only accept images of format png
 
 //minlength -- minimum length of a elements
 const input4 = document.querySelector(".input-normal4");
-input4.minlength = "20"; //limit of characters is 20
+input4.setAttribute("minlength", "4"); //limit of characters is 4
 
+//placeholder - message inside of input
+const input5 = document.querySelector(".input-normal5");
+input5.placeholder = "insert user name";
 
+//required - show if this field is obligatory
+const input6 = document.querySelector(".input-normal6");
+input6.required = "required";
