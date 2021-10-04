@@ -12,7 +12,20 @@ let titulo = document.querySelector(".titulo");
 let result = titulo.textContent;
 document.write(result);
 
+document.write("<br>");
+
 //innerText
 let parrafo = document.querySelector(".parrafo");
 result = parrafo.innerText; //return only the content of element
 document.write(result);
+
+document.write("<br>");
+
+//textContent show the hidden content
+let titulo2 = document.querySelector(".titulo2");
+let result1 = titulo2.textContent;
+document.write(result1);
+
+//innerHTML show all the code html but for alert
+let result2 = parrafo.innerHTML;
+alert(result2);
