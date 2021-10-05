@@ -32,3 +32,15 @@ console.log(Last_child);
 //childNodes - return all the node child 
 const child = container.childNodes;
 console.log(child);
+
+//other way of show the all child is: 
+child.forEach(child => console.log(child));
+
+//children - only show the element html no text
+const children = container.children;
+console.log(children);
+
+//see each element
+for(hijo of children){
+    console.log(hijo);
+}
