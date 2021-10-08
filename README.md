@@ -1,2 +1,2 @@
 # Javascript
-#course of javascript junior
+#course of javascript junior, channel youtube Soy Dalto
