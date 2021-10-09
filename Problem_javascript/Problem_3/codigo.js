@@ -12,7 +12,9 @@ if(age > 18){
     document.write("No puede entrar a la fiesta");
 }
 
-if(hour > 2){ //formato 24 horas
+document.write("<br>");
+
+if(hour > 2 && hour < 6){ //formato 24 horas
     document.write("No paga");
 } else {
     document.write("Paga");
