@@ -42,16 +42,17 @@ perro.SeeInfo(); //acede al metodo SeeInfo de la clase animal
 /*
 Caracteristicas de POO
 
-- Abstraccion
-- Modularidad
-- Jerarquia
+- Abstraccion - reducir un objeto a sus propiedades mas basicas
+- Modularidad - resolver un problema grande separandolo por partes
+- Encapsulamiento
+- Polimorfismo
 
 Otros conceptos
 
-- Polimorfismo
 - Herencia
-
-- Encapsulamiento
+- Metodos estaticos
 - Metodos accesores (Getter, setters)
 
-*/
+En Javascript todo es un objeto*/
+
+
