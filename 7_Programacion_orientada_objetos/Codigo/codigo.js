@@ -18,14 +18,40 @@ class animal{
     this.especie = especie;//this hace referencia al objetos que se va a crear
     this.edad = edad;
     this.color = color;
+    this.info = `Perro de raza ${this.especie}, edad ${this.edad} y color ${this.color}` 
+    //esta forma mostramos informacion de la clase animal
   }
+  //Metodos son las acciones que se realizaran y es una funcion
+  //crear metodo que nos permita ver informacion de la clase animal
+  SeeInfo(){
+    console.log("Información del animal: " + this.info);
+  }
+  
 }
 
 //Ahora creamos un objetos llamado perro al cual es un animal por lo cual
 //pertenece a la clase animal y le vamos a dar sus atributos
 
-let perro = new animal();
+let perro = new animal("Criollo", 5, "negro");
 
-console.log("Perro: " + perro);//console.log es para solo mostrar el resultado solo en la consola del navegador 
+console.log("Perro: " + perro.info);//console.log es para solo mostrar el resultado solo en la consola del navegador 
+perro.SeeInfo(); //acede al metodo SeeInfo de la clase animal
 //TAMBIEN CON CONSOLE.LOG PODEMOS EJECUTAR EL CODIGO CON node codigo.js EN LA
 //TERMINAL DE LINUX O MAC
+
+/*
+Caracteristicas de POO
+
+- Abstraccion
+- Modularidad
+- Jerarquia
+
+Otros conceptos
+
+- Polimorfismo
+- Herencia
+
+- Encapsulamiento
+- Metodos accesores (Getter, setters)
+
+*/
