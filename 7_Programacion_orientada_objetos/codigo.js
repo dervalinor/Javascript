@@ -32,27 +32,73 @@ class animal{
 //Ahora creamos un objetos llamado perro al cual es un animal por lo cual
 //pertenece a la clase animal y le vamos a dar sus atributos
 
-let perro = new animal("Criollo", 5, "negro");
+const perro = new animal("Criollo", 5, "negro");
 
 console.log("Perro: " + perro.info);//console.log es para solo mostrar el resultado solo en la consola del navegador 
 perro.SeeInfo(); //acede al metodo SeeInfo de la clase animal
 //TAMBIEN CON CONSOLE.LOG PODEMOS EJECUTAR EL CODIGO CON node codigo.js EN LA
 //TERMINAL DE LINUX O MAC
 
+console.log(" ");
+
 /*
 Caracteristicas de POO
 
 - Abstraccion - reducir un objeto a sus propiedades mas basicas
-- Modularidad - resolver un problema grande separandolo por partes
-- Encapsulamiento
-- Polimorfismo
+
+- Modularidad - resolver un problema grande separandolo por partes, por
+pedacitos
+
+- Encapsulamiento - hacer que todos los datos o atributos del objeto esten 
+privados, es decir que el usuario no pueda acceder a esos datos
+
+- Polimorfismo - ver como un objeto se comporta de forma distinta ante
+un mismo metodo, debido a sus propiedades
 
 Otros conceptos
 
-- Herencia
+- Herencia - 
 - Metodos estaticos
 - Metodos accesores (Getter, setters)
 
 En Javascript todo es un objeto*/
 
+class Person {
+    constructor(name, age, state_working){//Abstraccion
+        this.name = name;//encapsulamiento - solo accesible por los metodos
+        this.age = age;
+        this.state_working = state_working;
+        this.infomation = `My name is ${this.name} and age ${this.age}
+        and state working is ${this.state_working}`;
+    }
+    
+    view_info(){
+       console.log(this.infomation); 
+    }
+    //Ejemplo de polimorfismo
+    working(){
+        if(this.state_working == "Student"){
+            console.log("This person can't working");
+        } else {
+            console.log("This person can working");
+        }
+    }
+}
 
+//all object is variable const
+const student = new Person("Jhon", 23, "Student");
+const engineer = new Person("Sofia", 25, "Engineer");
+
+student.working();
+engineer.working();
+
+
+//concepto de herencia - donde una clase hereda atributos y metodos de 
+//otra clase
+
+class engineer extends Person {//heredara la propiedades y metodos de Person
+    constructor(name, age, state_workingi, type){
+        super(name, age, state_working); 
+        this.type = type; //nuevo atributo
+    }
+}
