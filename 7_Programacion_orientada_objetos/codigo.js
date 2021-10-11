@@ -57,8 +57,8 @@ un mismo metodo, debido a sus propiedades
 
 Otros conceptos
 
-- Herencia - 
-- Metodos estaticos
+- Herencia (extends) 
+- Metodos estaticos 
 - Metodos accesores (Getter, setters)
 
 En Javascript todo es un objeto*/
@@ -92,13 +92,28 @@ const engineer = new Person("Sofia", 25, "Engineer");
 student.working();
 engineer.working();
 
+console.log(" ");
 
 //concepto de herencia - donde una clase hereda atributos y metodos de 
 //otra clase
 
-class engineer extends Person {//heredara la propiedades y metodos de Person
-    constructor(name, age, state_workingi, type){
-        super(name, age, state_working); 
+class Engineer extends Person {//heredara la propiedades y metodos de Person
+    constructor(name, age, state_working, type, program){
+        super(name, age, state_working);//heredar las caracteristicas de la 
+        //clase Person 
         this.type = type; //nuevo atributo
+        this.program = program;
+    }
+    program_engineer(){
+        if(this.program == "yes"){
+            console.log(`Engineer ${this.name} is programer in c++`);
+        } else {
+            console.log(`Engineer ${this.name} isn't programer in c++`);
+        }
     }
 }
+
+const programer = new Engineer("Sofia", 25, "Engineer", "Computed", "yes");
+programer.program_engineer();
+
+//NO PODEMOS TENER UN OBJETO CON LAS MISMO NOMBRE QUE LA CLASE
