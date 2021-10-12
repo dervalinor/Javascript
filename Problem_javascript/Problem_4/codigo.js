@@ -57,14 +57,32 @@ class Phone {
 //create a class for height gamma where this have slow take video and recognize facial
 //use setters for change attribute of video and security of phone
 class Height_gamma extends Phone {
-    constructor(mark, color, weight, resolution_screen, resolution_screen, ram, speed_video, security_phone){
+    constructor(mark, color, weight, resolution_screen, resolution_camera, ram, speed_video, security_phone){
         super(mark, color, weight, resolution_screen, resolution_camera, ram);
         this.speed_video = speed_video;
         this.security_phone = security_phone;
     }
 
-    set new_thing(vel_video, sec_phone){
+    set new_speed(vel_video){
         this.speed_video = vel_video;
-        this.security_phone = sec_phone;
     } 
+
+    set new_video(sec_phone){
+        this.security_phone = sec_phone;
+    }
+
+    new_info(){
+        console.log(`This phone too have: speed video ${this.speed_video} and security phone ${this.security_phone}`);
+    }
 }
+
+const E_Melkor = new Height_gamma("E-Melkor", "Black", "120g", "3000x200px", "2000x100px", "8GB",
+                    "normal", "normal"); //search real resolution for phone
+E_Melkor.new_speed = "Very slow";
+E_Melkor.new_video = "Recognize facial";
+
+console.log("Property of phone: ");
+console.log(" ");
+E_Melkor.see_info();
+console.log("Novelties: ");
+E_Melkor.new_info();
